@@ -1,6 +1,6 @@
 {
-  "name": "nominatim-js",
-  "version": "1.0.10",
+  "name": "@deepzua/nominatim-js",
+  "version": "1.0.11",
   "description": "Unofficial JS SDK for the Nominatim Open Street Map service that allows geocoding and reverse geocoding",
   "keywords": [
     "nominatim",
@@ -12,7 +12,7 @@
     "map"
   ],
   "author": "Juan Camilo Guarín P <jcguarinpenaranda@gmail.com>",
-  "homepage": "https://github.com/owsas/opensource#readme",
+  "homepage": "https://github.com/DeepzUa/opensource#readme",
   "license": "MIT",
   "main": "lib/nominatim-js.js",
   "directories": {
@@ -24,14 +24,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owsas/opensource.git"
+    "url": "git@github.com:DeepzUa/opensource.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "tsc"
   },
   "bugs": {
-    "url": "https://github.com/owsas/opensource/issues"
-  },
-  "gitHead": "4e10e9c96486ca4997b1f4e2cea576881b700d9c"
+    "url": "https://github.com/DeepzUa/opensource/issues"
+  }
 }
