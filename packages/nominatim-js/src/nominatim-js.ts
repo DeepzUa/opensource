@@ -1,16 +1,18 @@
 import fetch from 'cross-fetch';
 
 interface ICommonParams {
+  'accept-language'?: string
+  accept_language?: string
+  addressdetails?: 0 | 1
+  debug?: 0 | 1,
+  email?: string
+  endpoint?: string, // custom open street map endpoint
+  extratags?: 0 | 1
   format?: 'html' | 'json' | 'xml' | 'jsonv2'
   json_callback?: string
-  accept_language?: string
-  'accept-language'?: string
-  addressdetails?: 0 | 1
-  extratags?: 0 | 1
+  lat?: number
+  lon?: number
   namedetails?: 0 | 1
-  email?: string
-  debug?: 0 | 1,
-  endpoint?: string, // custom open street map endpoint
 }
 
 // from: https://wiki.openstreetmap.org/wiki/Nominatim#Parameters_2
@@ -91,6 +93,8 @@ export interface IOsmId {
 
 export interface ILookupParams extends ICommonParams {}
 
+export interface IReversParams extends ICommonParams {};
+
 export class NominatimJS {
   private static NOMINATIM_ENDPOINT = 'https://nominatim.openstreetmap.org/';
 
@@ -139,6 +143,16 @@ export class NominatimJS {
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 
     url.searchParams.append('osm_ids', osmIds.map(NominatimJS.stringifyOsmId).join(','));
+
+    return fetch(url.toJSON())
+      .then(res => res.json());
+  }
+
+  public static async reverse(rawParams: IReversParams): Promise<ISearchResult> {
+    const params = NominatimJS.normalizeParams(rawParams);
+
+    const url = new URL(rawParams.endpoint || `${NominatimJS.NOMINATIM_ENDPOINT}reverse`);
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 
     return fetch(url.toJSON())
       .then(res => res.json());
