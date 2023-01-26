@@ -1,6 +1,6 @@
 {
   "name": "@deepzua/nominatim-js",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Unofficial JS SDK for the Nominatim Open Street Map service that allows geocoding and reverse geocoding",
   "keywords": [
     "nominatim",
@@ -32,5 +32,8 @@
   },
   "bugs": {
     "url": "https://github.com/DeepzUa/opensource/issues"
+  },
+  "dependencies": {
+    "cross-fetch": "3.1.5"
   }
 }
