@@ -62,7 +62,7 @@ export interface ISearchResult {
   osm_type: PlaceTypeLabel
   boundingbox?: string[4]
   lat: string
-  lng: string
+  lon: string
   display_name: string
   class: string
   type: string
