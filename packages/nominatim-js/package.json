@@ -1,6 +1,6 @@
 {
   "name": "@deepzua/nominatim-js",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Unofficial JS SDK for the Nominatim Open Street Map service that allows geocoding and reverse geocoding",
   "keywords": [
     "nominatim",
