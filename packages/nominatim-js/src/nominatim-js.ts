@@ -40,7 +40,8 @@ export interface IAddress {
   neighbourhood?: string
   suburb?: string
   postcode?: string
-  city: string
+  city?: string
+  town?: string
   city_district?: string
   county?: string
   state: string
