@@ -35,26 +35,27 @@ export interface ISearchParams extends ICommonParams {
 }
 
 export interface IAddress {
-  house_number?: string
-  road?: string
-  neighbourhood?: string
-  suburb?: string
-  postcode?: string
+  attraction?: string
+  bakery?: string
   city?: string
-  town?: string
   city_district?: string
-  county?: string
-  state: string
+  construction?: string
+  continent?: string
   country: string
   country_code: string
-  continent?: string
-  public_building?: string
-  attraction?: string
-  pedestrian?: string
-  peak?: string
-  bakery?: string
+  county?: string
   electronics?: string
-  construction?: string
+  house_number?: string
+  neighbourhood?: string
+  peak?: string
+  pedestrian?: string
+  postcode?: string
+  public_building?: string
+  road?: string
+  state: string
+  suburb?: string
+  town?: string
+  village?: string
 }
 
 export interface ISearchResult {
